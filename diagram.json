@@ -9,6 +9,15 @@
       "top": 0,
       "left": 0,
       "attrs": {}
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": -55.2,
+      "left": 78.6,
+      "attrs": {
+        "volume": "0.1"
+      }
     }
   ],
   "connections": [
@@ -23,6 +32,24 @@
       "$serialMonitor:TX",
       "",
       []
+    ],
+    [
+      "bz1:1",
+      "esp:GND.2",
+      "black",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "bz1:2",
+      "esp:23",
+      "red",
+      [
+        "v9.6",
+        "h-0.4"
+      ]
     ]
-  ]
+  ],
+  "dependencies": {}
 }
