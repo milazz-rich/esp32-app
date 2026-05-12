@@ -1,18 +1,14 @@
 #include <Arduino.h>
 
-// put function declarations here:
-int myFunction(int, int);
+uint8_t BUZZER = 23;
+
+uint32_t FREQUENCY = 400;
 
 void setup() {
-  // put your setup code here, to run once:
-  int result = myFunction(2, 3);
+  pinMode(BUZZER, OUTPUT);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-}
-
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
+  tone(BUZZER, FREQUENCY, 500);
+  delay(1000);
 }
